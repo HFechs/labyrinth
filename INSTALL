@@ -1,0 +1,4 @@
+apt-get install libncurses-dev
+make
+cd src
+./labyrinth
