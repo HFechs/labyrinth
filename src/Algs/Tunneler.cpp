@@ -3,7 +3,7 @@
 using namespace App::Game;
 
 namespace App::Algs {
-    const unsigned int Tunneler::MAX_LOOP = 100;
+    const unsigned int Tunneler::MAX_LOOP = 1000;
     
     TunnelerReturn Tunneler::dig(App::Game::Scene &scene, Point start, Point end) {
         Point positions[2] = {start, end};
