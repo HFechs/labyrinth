@@ -7,6 +7,7 @@
 namespace App::Algs {
     class SceneModify {
         private:
+            SceneModify();
             static void modify(
                 App::Game::Scene &scene, 
                 std::function<unsigned int(const unsigned int, const unsigned int, const unsigned int, const unsigned int)> calcX, 

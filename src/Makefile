@@ -1,15 +1,17 @@
 include ../config.mk
 
 OBJ=main.o \
-    IO/Terminal/Screen.o IO/Terminal/Events.o IO/Terminal/Painter.o \
-    Game/Main.o Game/Block.o Game/Scene.o \
-	Algs/Point.o Algs/Patterns.o Algs/Labyrinth.o Algs/SceneModify.o
+	IO/Terminal/Screen.o IO/Terminal/Events.o IO/Terminal/Painter.o \
+	Game/Main.o Game/Block.o Game/Scene.o \
+	Algs/Point.o Algs/Patterns.o Algs/Labyrinth.o Algs/SceneModify.o Algs/defines.o Algs/Explorer.o \
+	Algs/PathVisualizer.o Algs/Digger.o Algs/Tunneler.o
 	
 HEAD=globals.h \
-     IO/IScreen.hpp IO/IEvents.hpp IO/IPainter.hpp \
-     IO/Terminal/Screen.hpp IO/Terminal/Events.hpp IO/Terminal/Painter.hpp \
-	 Game/Main.hpp Game/Block.hpp Game/Scene.hpp \
-	 Algs/Point.hpp Algs/Patterns.hpp Algs/Labyrinth.hpp Algs/SceneModify.hpp
+	IO/IScreen.hpp IO/IEvents.hpp IO/IPainter.hpp \
+	IO/Terminal/Screen.hpp IO/Terminal/Events.hpp IO/Terminal/Painter.hpp \
+	Game/Main.hpp Game/Block.hpp Game/Scene.hpp \
+	Algs/Point.hpp Algs/Patterns.hpp Algs/Labyrinth.hpp Algs/SceneModify.hpp Algs/Explorer.hpp \
+	Algs/PathVisualizer.hpp Algs/Digger.hpp Algs/Tunneler.hpp
 
 all: ${PROGRAM}
 

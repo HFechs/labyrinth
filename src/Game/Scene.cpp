@@ -13,7 +13,7 @@ namespace App::Game {
     }
     
     Scene::Scene(const unsigned int width, const unsigned int height): width(width), height(height) {
-        Block pathBlock = Block(BlockType::PATH);
+        Block pathBlock(BlockType::PATH);
         for (unsigned int i = 0; i < this->length(); i++) {
             this->scene.push_back(pathBlock);
         }
@@ -21,8 +21,8 @@ namespace App::Game {
     
     Scene::Scene(const unsigned int width, std::vector<int> walls): width(width) {
         this->height = walls.size() / this->width;
-        Block pathBlock = Block(BlockType::PATH);
-        Block wallBlock = Block(BlockType::WALL);
+        Block pathBlock(BlockType::PATH);
+        Block wallBlock(BlockType::WALL);
         for (unsigned int i = 0; i < this->length(); i++) {
             this->scene.push_back(walls[i] ? wallBlock : pathBlock);
         }

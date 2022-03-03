@@ -17,10 +17,9 @@ namespace App::IO::Terminal {
         int key = getch();
         if (key) {
             std::map<int, Key> keyMap = this->getKeyMap();
-            std::map<int, Key>::iterator it;
-            it = keyMap.find(key);
-            if (it != keyMap.end()) {
-                value = (int) it->second;
+            auto search = keyMap.find(key);
+            if (search != keyMap.end()) {
+                value = (int) search->second;
             } else {
                 value = key;
             }

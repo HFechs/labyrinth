@@ -4,7 +4,7 @@ using namespace App::Game;
 
 namespace App::Algs {
     void Labyrinth::generate(Scene &scene) {
-        Patterns patterns = Patterns();
+        Patterns patterns;
         const unsigned int pcount = patterns.count();
 
         for (unsigned int y = 0; y < scene.getHeight() / 4; y++) {

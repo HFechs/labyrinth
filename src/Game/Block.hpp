@@ -22,5 +22,6 @@ namespace App::Game {
         public:
             Block(BlockType type);
             BlockType getType();
+            bool isWalkable();
     };
 }
