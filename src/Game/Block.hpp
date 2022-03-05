@@ -20,7 +20,7 @@ namespace App::Game {
         private:
             BlockType type;
         public:
-            Block(BlockType type);
+            Block(BlockType type = BlockType::PATH);
             BlockType getType();
             bool isWalkable();
     };

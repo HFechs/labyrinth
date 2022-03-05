@@ -8,21 +8,24 @@ namespace App::Algs {
     ExplorerReturn Explorer::explore(Scene &scene, Point start, Point end, Path &path) {
         Path explored;
         ExplorerRating rating;
-        return Explorer::explore(scene, start, end, start, explored, rating, 0, path);
+        Direction direction = Direction::RIGHT;
+        return Explorer::explore(scene, start, end, start, direction, explored, rating, 0, path);
     }
     
     ExplorerReturn Explorer::explore(Scene &scene, Point start, Point end, Path &explored, Path &path) {
         ExplorerRating rating;
-        return Explorer::explore(scene, start, end, start, explored, rating, 0, path);
-    }
-    
-    ExplorerReturn Explorer::explore(App::Game::Scene &scene, Point start, Point end, Point position, ExplorerRating &rating, const unsigned int limit, Path &path) {
-        Path explored;
-        return Explorer::explore(scene, start, end, position, explored, rating, limit, path);
-    }
-    
-    ExplorerReturn Explorer::explore(App::Game::Scene &scene, Point start, Point end, Point position, Path &explored, ExplorerRating &rating, const unsigned int limit, Path &path) {
         Direction direction = Direction::RIGHT;
+        return Explorer::explore(scene, start, end, start, direction, explored, rating, 0, path);
+    }
+    
+    ExplorerReturn Explorer::explore(App::Game::Scene &scene, Point start, Point end, Point position, Direction &direction,
+                                     ExplorerRating &rating, const unsigned int limit, Path &path) {
+        Path explored;
+        return Explorer::explore(scene, start, end, position, direction, explored, rating, limit, path);
+    }
+    
+    ExplorerReturn Explorer::explore(App::Game::Scene &scene, Point start, Point end, Point position, Direction &direction,
+                                     Path &explored, ExplorerRating &rating, const unsigned int limit, Path &path) {
         signed int x = position.getX();
         signed int y = position.getY();
         unsigned int ratingOfEndByStart = 0;

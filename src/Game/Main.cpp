@@ -45,6 +45,7 @@ namespace App::Game {
         
         Scene scene(width, height);
         Main::generateScene(scene, width, height);
+        Enemy enemy(scene, Point(width - 1, height - 1), Point(0, 0));
         
         tscreen.drawScene(scene);
         tscreen.flip();
@@ -57,6 +58,11 @@ namespace App::Game {
                 char buf[1024];
                 sprintf(buf, "%i %i %i %i", width, height, (int) e, value);
                 tscreen.echo(0, 0, buf);
+                tscreen.flip();
+            }
+            
+            if (enemy.step()) {
+                tscreen.drawScene(scene);
                 tscreen.flip();
             }
         }

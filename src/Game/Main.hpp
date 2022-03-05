@@ -8,6 +8,7 @@
 
 #include "Scene.hpp"
 #include "Block.hpp"
+#include "Enemy.hpp"
 #include "../Algs/Labyrinth.hpp"
 #include "../Algs/Tunneler.hpp"
 #include "../IO/IEvents.hpp"

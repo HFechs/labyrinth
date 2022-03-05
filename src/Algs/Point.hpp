@@ -10,7 +10,7 @@ namespace App::Algs {
         public:
             static const size_t BITS;
             Point(const unsigned int x, const unsigned int y);
-            Point(const unsigned int xy);
+            Point(const unsigned int xy = 0);
             unsigned int getX();
             unsigned int getY();
             unsigned int getXY();

@@ -22,6 +22,7 @@ namespace App::IO::Terminal {
         curs_set(0);
         cbreak();
         clear();
+        timeout(1);
         
         //init color pairs
         if (has_colors()) {

@@ -15,7 +15,7 @@ namespace App::IO::Terminal {
 
     Event Events::get(int &value) {
         int key = getch();
-        if (key) {
+        if (key != -1 && key) {
             std::map<int, Key> keyMap = this->getKeyMap();
             auto search = keyMap.find(key);
             if (search != keyMap.end()) {

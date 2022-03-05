@@ -21,7 +21,7 @@ namespace App::IO::Terminal {
         mapColor[(size_t) BlockType::END] = ScreenColor::YELLOW_BLACK;
         mapColor[(size_t) BlockType::WALL] = ScreenColor::BLACK_RED;
         mapColor[(size_t) BlockType::PLAYER] = ScreenColor::GREEN_BLACK;
-        mapColor[(size_t) BlockType::ENEMY] = ScreenColor::RED_BLACK;
+        mapColor[(size_t) BlockType::ENEMY] = ScreenColor::GREEN_BLACK;
         mapColor[(size_t) BlockType::DEBUG1] = ScreenColor::BLUE_BLACK;
         mapColor[(size_t) BlockType::DEBUG2] = ScreenColor::GREEN_BLACK;
         mapColor[(size_t) BlockType::DEBUG3] = ScreenColor::RED_BLACK;

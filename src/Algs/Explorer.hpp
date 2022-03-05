@@ -27,8 +27,10 @@ namespace App::Algs {
             static const unsigned int MAX_LOOP;
             static ExplorerReturn explore(App::Game::Scene &scene, Point start, Point end, Path &path);
             static ExplorerReturn explore(App::Game::Scene &scene, Point start, Point end, Path &explored, Path &path);
-            static ExplorerReturn explore(App::Game::Scene &scene, Point start, Point end, Point position, ExplorerRating &rating, const unsigned int limit, Path &path);
-            static ExplorerReturn explore(App::Game::Scene &scene, Point start, Point end, Point position, Path &explored, ExplorerRating &rating, const unsigned int limit, Path &path);
+            static ExplorerReturn explore(App::Game::Scene &scene, Point start, Point end,  Point position, Direction &direction,
+                                                    ExplorerRating &rating, const unsigned int limit, Path &path);
+            static ExplorerReturn explore(App::Game::Scene &scene, Point start, Point end, Point position, Direction &direction,
+                                                    Path &explored, ExplorerRating &rating, const unsigned int limit, Path &path);
             static bool isPointWalkable(App::Game::Scene &scene, signed int x, signed int y, Path &explored);
     };
 }
